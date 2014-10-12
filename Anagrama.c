@@ -17,12 +17,13 @@ static char* GetWordChars(char* palavra)
 	charlist=(char*)malloc(strlen(palavra)+1); //Maximum List size
 	*charlist=*palavra; //first character on list; Always
 	for(p=palavra+1,i=0;*p;p++,i++)
-	{
+	{   printf("%c",*p);
 		if(DiffFromVector(*p+1,palavra,i+1))
 			*(charlist+1+i)=*p;
 
 	}
-	*(charlist+i)=0; //null
+	*(charlist+i+1)=0; //null
+	return charlist;
 }
 static void AnagramaSemVogal(char* palavra)
 {
