@@ -16,6 +16,11 @@ void GeraPalavras(int i,char* p,int n)
 			p[n-i]='a'+j;
 			GeraPalavras(i-1,p,n);
 		}
+		for(j=0;j<('Z'-'A'+1);j++)
+		{
+			p[n-i]='A'+j;
+			GeraPalavras(i-1,p,n);
+		}
 	}
 }
 
